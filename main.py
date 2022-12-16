@@ -3,7 +3,7 @@ from time import localtime
 from requests import get, post
 from datetime import datetime, date
 #sys.path.append(os.getcwd())
-#from zhdate import ZhDate
+from zhdate import ZhDate
 import sys
 import os
 
@@ -180,7 +180,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         # 获取距离下次生日的时间
         birth_day = get_birthday(value["birthday"], year, today)
         if birth_day == 0:
-            birthday_data = "今天{}生日哦，祝{}生日快乐！".format(value["name"], value["name"])
+            birthday_data = "今天是我们{}的生日哦，我的修宝贝生日快乐！天天快乐！和我见面上万次！！！".format(value["name"])
         else:
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
